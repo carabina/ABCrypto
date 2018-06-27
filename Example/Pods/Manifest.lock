@@ -1,0 +1,16 @@
+PODS:
+  - ABCrypto (0.1.0)
+
+DEPENDENCIES:
+  - ABCrypto (from `../`)
+
+EXTERNAL SOURCES:
+  ABCrypto:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ABCrypto: 0d68cc4853a582c34cdbff81574d7a733ce62095
+
+PODFILE CHECKSUM: e33b809795b7ae3a8980b28425cd2491ad6ddd30
+
+COCOAPODS: 1.5.0

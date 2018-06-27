@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ABCrypto_Example' do
+  pod 'ABCrypto', :path => '../'
+
+  target 'ABCrypto_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

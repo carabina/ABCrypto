@@ -1,15 +1,15 @@
 {
   "name": "ABCrypto",
   "version": "0.1.0",
-  "summary": "A short description of ABCrypto.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "This is to encrypt and decrypt the NSData object",
+  "description": "This is to encrypt and decrypt the NSData object, This is to encrypt and decrypt the NSData object, This is to encrypt and decrypt the NSData object, This is to encrypt and decrypt the NSData object, This is to encrypt and decrypt the NSData object",
   "homepage": "https://github.com/abhilashpnayar/ABCrypto",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "abhilashpnayar": "aperayil@deloitte.com"
+    "abhilashpnayar": "abhilashpnayar@gmail.com"
   },
   "source": {
     "git": "https://github.com/abhilashpnayar/ABCrypto.git",

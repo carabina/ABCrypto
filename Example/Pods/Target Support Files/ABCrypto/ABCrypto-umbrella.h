@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "ABCryptor.h"
+#import "NSData+AES256Encryption.h"
 
 FOUNDATION_EXPORT double ABCryptoVersionNumber;
 FOUNDATION_EXPORT const unsigned char ABCryptoVersionString[];

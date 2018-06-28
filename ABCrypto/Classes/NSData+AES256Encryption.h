@@ -8,6 +8,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSData (AES256Encryption)
-- (NSData *)encryptedDataWithKey:(NSString*)key;
-- (NSData *)decryptedDataWithKey:(NSString*)key;
+- (NSData *)encryptedDataWithKey:(NSData *)key;
+- (NSData *)decryptedDataWithKey:(NSData *)key;
 @end

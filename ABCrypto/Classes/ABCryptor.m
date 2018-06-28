@@ -15,7 +15,7 @@
  -parameter data : Data to be encrypted.
  -parameter key  : Key used for encryption
  */
-- (NSData *)encryptData:(NSData *)data usingKey:(NSString *)key{
+- (NSData *)encryptData:(NSData *)data usingKey:(NSData *)key{
     NSData *encryptedPayload = [data encryptedDataWithKey:key];
     return encryptedPayload;
 }
@@ -25,7 +25,7 @@
  -parameter data : Data to be decrypted.
  -parameter key  : Key used for decryption
  */
-- (NSData *)decryptCipherData:(NSData *)data usingKey:(NSString *)key{
+- (NSData *)decryptCipherData:(NSData *)data usingKey:(NSData *)key{
     NSData *encryptedPayload = [data decryptedDataWithKey:key];
     return encryptedPayload;
 }

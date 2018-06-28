@@ -44,13 +44,8 @@
     memcpy(*dataPtr, data.bytes, data.length);
 }
 
-
-- (NSData *)encryptedDataWithKey:(NSString*)key
+- (NSData *)encryptedDataWithKey:(NSData*)key
 {
-    // Fetch key data and put into C string array padded with \0
-    char *keyPtr;
-    [NSData fillDataArray:&keyPtr length:kCCKeySizeAES256+1 usingHexString:key];
-    
     // For block ciphers, the output size will always be less than or equal to the input size plus the size of one block because we add padding.
     // That's why we need to add the size of one block here
     NSUInteger dataLength = self.length;
@@ -59,11 +54,10 @@
     
     size_t numBytesEncrypted = 0;
     CCCryptorStatus cryptStatus = CCCrypt(kCCEncrypt, kCCAlgorithmAES, kCCOptionPKCS7Padding | kCCOptionECBMode,
-                                          keyPtr, kCCKeySizeAES256, nil,
+                                          key.bytes, kCCKeySizeAES256, nil,
                                           [self bytes], [self length], /* input */
                                           buffer, bufferSize, /* output */
                                           &numBytesEncrypted);
-    free(keyPtr);
     
     if(cryptStatus == kCCSuccess) {
         return [NSData dataWithBytesNoCopy:buffer length:numBytesEncrypted];
@@ -73,13 +67,8 @@
     return nil;
 }
 
-- (NSData *)decryptedDataWithKey:(NSString*)key
+- (NSData *)decryptedDataWithKey:(NSData*)key
 {
-    // Fetch key data and put into C string array padded with \0
-    char *keyPtr;
-    [NSData fillDataArray:&keyPtr length:kCCKeySizeAES256+1 usingHexString:key];
-    
-    
     // For block ciphers, the output size will always be less than or equal to the input size plus the size of one block because we add padding.
     // That's why we need to add the size of one block here
     NSUInteger dataLength = self.length;
@@ -88,11 +77,10 @@
     
     size_t numBytesDecrypted = 0;
     CCCryptorStatus cryptStatus = CCCrypt( kCCDecrypt, kCCAlgorithmAES, kCCOptionPKCS7Padding | kCCOptionECBMode,
-                                          keyPtr, kCCKeySizeAES256, nil,
+                                          key.bytes, kCCKeySizeAES256, nil,
                                           [self bytes], dataLength, /* input */
                                           buffer, bufferSize, /* output */
                                           &numBytesDecrypted );
-    free(keyPtr);
     
     if( cryptStatus == kCCSuccess )
     {

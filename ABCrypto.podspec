@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ABCrypto'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'This pod help developers to encrypt/decrypt the NSData using CommonCrypto lib'
 
 # This description is used to generate tags and improve search results.

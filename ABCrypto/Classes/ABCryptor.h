@@ -8,6 +8,6 @@
 #import <Foundation/Foundation.h>
 
 @interface ABCryptor : NSObject
-- (NSData *)encryptData:(NSData *)data usingKey:(NSString *)key;
-- (NSData *)decryptCipherData:(NSData *)data usingKey:(NSString *)key;
+- (NSData *)encryptData:(NSData *)data usingKey:(NSData *)key;
+- (NSData *)decryptCipherData:(NSData *)data usingKey:(NSData *)key;
 @end

@@ -8,11 +8,6 @@
 #import <Foundation/Foundation.h>
 
 @interface ABCryptor : NSObject
-- (NSData *)decodeAndPrintCipherBase64Data:(NSData *)cipherText
-                               usingHexKey:(NSString *)hexKey
-                                     hexIV:(NSString *)hexIV;
-- (NSData *)encodeAndPrintPlainText:(NSData *)plainData
-                        usingHexKey:(NSString *)hexKey
-                              hexIV:(NSString *)hexIV;
-
+- (NSData *)encryptData:(NSData *)data usingKey:(NSString *)key;
+- (NSData *)decryptCipherData:(NSData *)data usingKey:(NSString *)key;
 @end

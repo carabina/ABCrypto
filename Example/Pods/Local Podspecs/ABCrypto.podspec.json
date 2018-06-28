@@ -1,8 +1,8 @@
 {
   "name": "ABCrypto",
   "version": "0.1.0",
-  "summary": "This is to encrypt and decrypt the NSData object",
-  "description": "This is to encrypt and decrypt the NSData object, This is to encrypt and decrypt the NSData object, This is to encrypt and decrypt the NSData object, This is to encrypt and decrypt the NSData object, This is to encrypt and decrypt the NSData object",
+  "summary": "This pod help developers to encrypt/decrypt the NSData using CommonCrypto lib",
+  "description": "This pod help developers to encrypt/decrypt the NSData using CommonCrypto lib. Pod can be used in iOS applications which runs Objective-C, Swift or any of the private/public pods without bridging headers. Courtesy to Richard Warrender for the NSData extension.",
   "homepage": "https://github.com/abhilashpnayar/ABCrypto",
   "license": {
     "type": "MIT",

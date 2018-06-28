@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ABCrypto'
   s.version          = '0.1.0'
-  s.summary          = 'This is to encrypt and decrypt the NSData object'
+  s.summary          = 'This pod help developers to encrypt/decrypt the NSData using CommonCrypto lib'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-s.description      = 'This is to encrypt and decrypt the NSData object, This is to encrypt and decrypt the NSData object, This is to encrypt and decrypt the NSData object, This is to encrypt and decrypt the NSData object, This is to encrypt and decrypt the NSData object'
+s.description      = 'This pod help developers to encrypt/decrypt the NSData using CommonCrypto lib. Pod can be used in iOS applications which runs Objective-C, Swift or any of the private/public pods without bridging headers. Courtesy to Richard Warrender for the NSData extension.'
 
 s.homepage         = 'https://github.com/abhilashpnayar/ABCrypto'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'

@@ -22,7 +22,7 @@ pod 'ABCrypto'
 
 ## Author
 
-abhilashpnayar, aperayil@deloitte.com
+abhilashpnayar, abhilashpnayar@gmail.com
 
 ## License
 

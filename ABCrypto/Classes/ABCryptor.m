@@ -9,20 +9,24 @@
 #import "NSData+AES256Encryption.h"
 
 @implementation ABCryptor
-- (NSData *)decodeAndPrintCipherBase64Data:(NSData *)cipherText
-                           usingHexKey:(NSString *)hexKey
-                                 hexIV:(NSString *)hexIV
-{
-    NSAssert(cipherText != nil, @"Couldn't base64 decode cipher text");
-    NSData *decryptedPayload = [cipherText originalDataWithHexKey:hexKey hexIV:hexIV];
-    return decryptedPayload;
+
+/* Method will encrypt the data and return the same.
+ 
+ -parameter data : Data to be encrypted.
+ -parameter key  : Key used for encryption
+ */
+- (NSData *)encryptData:(NSData *)data usingKey:(NSString *)key{
+    NSData *encryptedPayload = [data encryptedDataWithKey:key];
+    return encryptedPayload;
 }
 
-- (NSData *)encodeAndPrintPlainText:(NSData *)plainData
-                    usingHexKey:(NSString *)hexKey
-                          hexIV:(NSString *)hexIV
-{
-    NSData *encryptedPayload = [plainData encryptedDataWithHexKey:hexKey hexIV:hexIV];
+/* Method will decrypt the data and return the same.
+ 
+ -parameter data : Data to be decrypted.
+ -parameter key  : Key used for decryption
+ */
+- (NSData *)decryptCipherData:(NSData *)data usingKey:(NSString *)key{
+    NSData *encryptedPayload = [data decryptedDataWithKey:key];
     return encryptedPayload;
 }
 
